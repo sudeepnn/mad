@@ -1,15 +1,18 @@
 package com.example.venuebooking;
 
+import android.content.DialogInterface;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
-public class homeuser extends AppCompatActivity {
+public class Homeuser extends AppCompatActivity {
     FrameLayout frameLayout;
     BottomNavigationView bottomNavigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +33,23 @@ public class homeuser extends AppCompatActivity {
                     case R.id.contact:
                         getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,new ContactFragment()).commit();
                         break;
+                    case R.id.logout:
+//                        AlertDialog.Builder builder=new AlertDialog.Builder(Homeuser);
+//                        builder.setTitle("Logout");
+//                        builder.setMessage("Are you sure you want to logout ?");
+//                        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialogInterface, int i) {
+//                                finish();
+//                            }
+//
+//                        });
+//                        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialogInterface, int i) {
+//                                dialogInterface.dismiss();
+//                            }
+//                        });
 
                 }
                 return true;

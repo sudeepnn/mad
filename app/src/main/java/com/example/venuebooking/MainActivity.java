@@ -1,15 +1,9 @@
 package com.example.venuebooking;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.FrameLayout;
-
-import com.example.venuebooking.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.signuppage);
     }
     public void onclick(View view){
-            Intent intent=new Intent(this,homeuser.class);
+            Intent intent=new Intent(this, Homeuser.class);
             startActivity(intent);
     }
 

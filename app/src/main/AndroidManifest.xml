@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Venuebooking">
         <activity
-            android:name=".homeuser"
+            android:name=".Homeuser"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
