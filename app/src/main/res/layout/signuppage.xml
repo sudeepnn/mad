@@ -8,6 +8,13 @@
     android:background="@drawable/backgrnd"
     android:gravity="center">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="208dp"
+        android:layout_height="127dp"
+        android:layout_marginBottom="30dp"
+        app:srcCompat="@drawable/logo" />
+
     <android.support.v7.widget.CardView
         android:layout_width="352dp"
         android:layout_height="wrap_content"

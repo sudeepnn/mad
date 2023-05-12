@@ -8,6 +8,14 @@
     android:background="@drawable/backgrnd"
     android:gravity="center">
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="208dp"
+        android:layout_height="127dp"
+        android:layout_marginBottom="30dp"
+        app:srcCompat="@drawable/logo"
+        android:contentDescription="TODO" />
+
     <android.support.v7.widget.CardView
         android:layout_width="352dp"
         android:layout_height="wrap_content"
@@ -28,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_medium"
-                android:text="@string/login"
+                android:text="@string/signin"
                 android:textAlignment="center"
                 android:textColor="@color/lightpurple"
                 android:textSize="34sp"
@@ -41,7 +49,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:boxStrokeColor="@color/lightpurple"
                 app:hintTextAppearance="@style/CustomHintTextAppearance">
-                >
+
                 <android.support.design.widget.TextInputEditText
 
                     android:id="@+id/username"
@@ -100,6 +108,7 @@
                 android:layout_marginTop="30dp"
                 android:background="@drawable/btnshape"
                 android:fontFamily="@font/poppins_medium"
+                android:onClick="onclick"
                 android:text="@string/login"
                 android:textAlignment="center"
                 android:textColor="@color/white"
