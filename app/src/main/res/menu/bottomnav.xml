@@ -15,4 +15,5 @@
         android:id="@+id/logout"
         android:icon="@drawable/ic_logout_svgrepo_com"
         android:title="Logout" />
+
 </menu>

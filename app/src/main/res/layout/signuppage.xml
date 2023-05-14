@@ -16,7 +16,7 @@
         app:srcCompat="@drawable/logo" />
 
     <android.support.v7.widget.CardView
-        android:layout_width="352dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/form"
         app:cardCornerRadius="20dp"
@@ -24,7 +24,7 @@
 
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="330dp"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:orientation="vertical"
@@ -38,16 +38,14 @@
                 android:text="@string/signup"
                 android:textAlignment="center"
                 android:textColor="@color/lightpurple"
-                android:textSize="34sp"
-                android:textStyle="bold" />
-
+                android:textSize="34sp" />
 
 
             <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="40dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginTop="20dp"
                 app:boxStrokeColor="@color/lightpurple"
                 app:hintTextAppearance="@style/CustomHintTextAppearance">
 
@@ -67,10 +65,10 @@
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_height="match_parent"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 app:boxStrokeColor="@color/lightpurple"
                 app:hintTextAppearance="@style/CustomHintTextAppearance">
 
@@ -79,6 +77,8 @@
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:drawableEnd="@drawable/pw_eye"
+
                     android:layout_marginTop="20dp"
                     android:background="@drawable/form"
                     android:drawableStart="@drawable/ic_baseline_lock_24"
@@ -91,10 +91,10 @@
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_height="match_parent"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 app:boxStrokeColor="@color/lightpurple"
                 app:hintTextAppearance="@style/CustomHintTextAppearance">
 
@@ -107,6 +107,8 @@
                     android:background="@drawable/form"
                     android:drawableStart="@drawable/ic_baseline_lock_24"
                     android:drawablePadding="8dp"
+                    android:drawableEnd="@drawable/pw_eye"
+
                     android:hint="@string/confirm_password"
                     android:importantForAutofill="no"
                     android:inputType="textPassword"
@@ -124,8 +126,11 @@
                 android:fontFamily="@font/poppins_regular"
                 android:text="@string/register"
                 android:textAlignment="center"
+                android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
@@ -135,7 +140,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:fontFamily="@font/poppins_medium"
+        android:fontFamily="@font/poppins_regular"
         android:onClick="getstarted"
         android:padding="8dp"
         android:text="@string/already_registered_login"
