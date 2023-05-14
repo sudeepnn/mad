@@ -11,10 +11,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
-
     }
     public void getstarted(View view){
         setContentView(R.layout.loginpage);
@@ -22,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     public void loigin(View view){
         setContentView(R.layout.signuppage);
     }
-    public void onclick(View view){
+    public void success(View view){
             Intent intent=new Intent(this, Homeuser.class);
             startActivity(intent);
     }

@@ -34,7 +34,7 @@ public class Homeuser extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,new ContactFragment()).commit();
                         break;
                     case R.id.logout:
-//                        AlertDialog.Builder builder=new AlertDialog.Builder(Homeuser);
+//                        AlertDialog.Builder builder=new AlertDialog.Builder(this);
 //                        builder.setTitle("Logout");
 //                        builder.setMessage("Are you sure you want to logout ?");
 //                        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
