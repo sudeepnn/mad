@@ -11,8 +11,9 @@
     <item android:title="Contact"
         android:icon="@drawable/ic_baseline_phone_24"
         android:id="@+id/contact"/>
-    <item android:title="Logout"
-        android:icon="@drawable/ic_logout_svgrepo_com"
+    <item
         android:id="@+id/logout"
-        />
+        android:icon="@drawable/ic_logout_svgrepo_com"
+        android:title="Logout" />
+
 </menu>

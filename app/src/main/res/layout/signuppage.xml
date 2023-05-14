@@ -55,7 +55,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="40dp"
-
                     android:drawableStart="@drawable/ic_baseline_person_24"
                     android:drawablePadding="8dp"
                     android:hint="@string/username"
@@ -131,6 +130,7 @@
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 tools:ignore="DuplicateSpeakableTextCheck" />
+
 
         </LinearLayout>
     </android.support.v7.widget.CardView>

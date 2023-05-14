@@ -7,6 +7,8 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 
 public class Homeuser extends AppCompatActivity {
@@ -19,6 +21,8 @@ public class Homeuser extends AppCompatActivity {
         setContentView(R.layout.activity_homeuser);
         frameLayout=(FrameLayout)findViewById(R.id.framelayout);
         bottomNavigationView=(BottomNavigationView) findViewById(R.id.bottomNavigationView);
+
+
         getSupportFragmentManager().beginTransaction().add(R.id.framelayout,new HomeFragment()).commit();
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -34,25 +38,57 @@ public class Homeuser extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,new ContactFragment()).commit();
                         break;
                     case R.id.logout:
-//                        AlertDialog.Builder builder=new AlertDialog.Builder(this);
-//                        builder.setTitle("Logout");
-//                        builder.setMessage("Are you sure you want to logout ?");
-//                        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialogInterface, int i) {
-//                                finish();
-//                            }
-//
-//                        });
-//                        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialogInterface, int i) {
-//                                dialogInterface.dismiss();
-//                            }
-//                        });
+                        AlertDialog.Builder builder = new AlertDialog.Builder(Homeuser.this);
+                        View logoutModal = getLayoutInflater().inflate(R.layout.logout_modal, null);
+                        builder.setView(logoutModal);
+
+                        Button logoutButton = logoutModal.findViewById(R.id.logout_button);
+                        Button cancelButton = logoutModal.findViewById(R.id.cancel_button);
+
+                        AlertDialog dialog = builder.create();
+                        dialog.show();
+
+                        logoutButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                // Perform logout action
+                                finish();
+                            }
+                        });
+
+                        cancelButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                dialog.dismiss();
+                            }
+                        });
+
+                        return true;
+
+
 
                 }
                 return true;
+            }
+        });
+    }
+
+    public void logout(View view) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(Homeuser.this);
+        builder.setTitle("Logout");
+        builder.setMessage("Are you sure you want to logout ?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                finish();
+            }
+
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
             }
         });
     }
