@@ -161,12 +161,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/busmantap" />
+                        android:src="@drawable/busmantap"
+                        tools:ignore="ImageContrastCheck" />
 
                     <RelativeLayout
                         android:layout_width="381dp"
                         android:layout_height="228dp"
-                        android:layout_gravity="bottom">
+                        android:layout_gravity="bottom"
+                        tools:ignore="TextSizeCheck">
 
                         <TextView
                             android:id="@+id/busmantap"
@@ -282,12 +284,6 @@
 
 
                 </android.support.v7.widget.CardView>
-
-
-
-
-
-
             </LinearLayout>
         </ScrollView>
 
